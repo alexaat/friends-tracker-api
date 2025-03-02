@@ -269,8 +269,8 @@ INSERT INTO locations (user_id, latitude, longitude) VALUES (1, 51.5083456, -0.0
 INSERT INTO locations (user_id, latitude, longitude) VALUES (2, 51.4999139, -0.1251736);
 INSERT INTO locations (user_id, latitude, longitude) VALUES (3, 51.5012373, -0.1418884);
 
-INSERT INTO invites (from_id, to_id) VALUES (1, 5);
-INSERT INTO invites (from_id, to_id) VALUES (3, 5);
+INSERT INTO invites (from_id, to_id) VALUES (2, 1);
+INSERT INTO invites (from_id, to_id) VALUES (3, 1);
 
 
 */
@@ -341,9 +341,9 @@ INSERT INTO users (name, email, avatar) VALUES ('Charlie', 'charlie@gmail.com', 
 INSERT INTO users (name, email, avatar) VALUES ('Doug', 'doug@gmail.com', 'https://people.com/thmb/LHRqhgllrUZ5cV-gzT4-J02oJOA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(756x379:758x381):format(webp)/doug-nickelodeon-122724-ed5e58e9bdee4615a498209a7e68d758.jpg');
 
 CREATE TABLE locations (id SERIAL PRIMARY KEY, user_id INT NOT NULL, latitude REAL NOT NULL, longitude REAL NOT NULL, timestamp TIMESTAMP DEFAULT current_timestamp);
-INSERT INTO locations (user_id, latitude, longitude) VALUES (1, 51.5083456, -0.0764236);
-INSERT INTO locations (user_id, latitude, longitude) VALUES (2, 51.4999139, -0.1251736);
-INSERT INTO locations (user_id, latitude, longitude) VALUES (3, 51.5012373, -0.1418884);
+INSERT INTO locations (user_id, latitude, longitude) VALUES (2, 51.5083456, -0.0764236);
+INSERT INTO locations (user_id, latitude, longitude) VALUES (3, 51.4999139, -0.1251736);
+INSERT INTO locations (user_id, latitude, longitude) VALUES (4, 51.5012373, -0.1418884);
 
 UPDATE users SET friends = '[2,3]' WHERE id = 1;
 

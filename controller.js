@@ -1,5 +1,6 @@
 const pool = require('./db/connection')
 const queries = require('./db/queries')
+const WS = require('./network/ws');
 
 const authHandler = (req, res) => {
   const body = req.body
@@ -350,6 +351,7 @@ const acceptInvite = (req, res) => {
           res.status(500).end()
           return
         }
+        //WS.send('friends list updated...');
         let friends_array = results.rows[0][0];
         if(!friends_array){
           friends_array = [];
